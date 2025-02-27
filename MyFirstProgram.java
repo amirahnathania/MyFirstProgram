@@ -20,79 +20,79 @@ public class MyFirstProgram {
         String randomBg = bgColors[random.nextInt(bgColors.length)];
 
         // Menampilkan teks dengan latar belakang acak
-        System.out.println(randomBg + "🔥 Selamat datang didunia java 🔥" + RESET);
-        System.out.println(randomBg + "💻 Bersiaplah untuk petualangan seru dan menarik bersama java 💻" + RESET);
+        System.out.println(randomBg + "🔥 Welcome to the world of Java 🔥" + RESET);
+        System.out.println(randomBg + "💻 Get ready for an exciting journey with Java! 💻" + RESET);
 
         // Meminta nama pengguna
         Scanner scanner = new Scanner(System.in);
-        System.out.println(randomBg + "Masukkan nama kamu: " + RESET);
-        String nama = scanner.nextLine();
-        System.out.println(randomBg + "🚀 Hallo, " + nama + "!!, Apakah kamu siap untuk kejutan menarik? 🚀" + RESET);
+        System.out.println(randomBg + "Enter your name: " + RESET);
+        String name = scanner.nextLine();
+        System.out.println(randomBg + "🚀 Hello, " + name + "!!, Are you ready for an interesting surprise? 🚀" + RESET);
 
         // Meminta persetujuan pengguna untuk menampilkan fakta
-        System.out.println(randomBg + "Apakah kamu ingin melihat fakta menarik tentang java? (y/n)" + RESET);
-        String jawaban = scanner.nextLine().trim().toLowerCase();
+        System.out.println(randomBg + "Do you want to see an interesting fun facts about Java? (y/n): " + RESET);
+        String answer = scanner.nextLine().trim().toLowerCase();
 
-        if (jawaban.equals("y")) {
+        if (answer.equals("y")) {
             // Kata-kata pengantar sebelum menampilkan fakta
-            String[] kataPengantar = {
-                "🤔 Pernahkah kamu berfikir...",
-                "💡 Fakta menarik ini mungkin akan mengejutkanmu!", 
-                "🎉 WOW!! Tahukah kamu bahwa....",
-                "🔎 Mari kita lihat satu fakta unik tentang java",
-                "🌟 Ini dia fakta keren yang mungkin belum kamu tahu!"
+            String[] intros = {
+                "🤔 Have you ever thought about this...",
+                "💡 This fun fact might surprise you!", 
+                "🎉 WOW!! Did you know that....",
+                "🔎 Let's check out one unique fact about Java!",
+                "🌟 Here's a cool fact you might not know!"
             };
 
             // Fakta menarik tentang java 
-            String[] faktaJava = {
-                "Java awalnya bernama Oak sebelum diubah menjadi Java.",
-                "Java pertama kali dirilis oleh Sun Microsystems pada tahun 1995.",
-                "Slogan Java adalah 'Write Once, Run Anywhere' (WORA).",
-                "Java digunakan oleh lebih dari 3 miliar perangkat diseluruh dunia.",
-                "Android menggunakan Java sebagai bahasa utama dalam pengembangan.",
-                "Java diambil dari nama kopi Java, bukan hanya sekedar nama acak.",
-                "Java memiliki maskot bernama 'Duke'.",
-                "Oracle Corpuration saat ini mengelola pengembangan Java setelah mengakuisisi Sun Microsystems.",
-                "Java tidak memiliki pointer eksplisit seperti C++ untuk meningkatkan keamanan.",
-                "Java Virtual Machine (JVM) membuat java bisa berjalan diberbagai platform tanpa perlu dikompilasi ulang.",
-                "Java adalah salah satu bahasa pemrograman yang paling populer di dunia.",
-                "Hampir semua perusahaan besar menggunakan java dalam sistem backend mereka.",
-                "Java banyak digunakan dalam pengembangan aplikasi perbankan karena keamanannya yang tinggi.",
-                "Minecraft, salah satu game terpopuler di dunia, dibuat dengan Java",
-                "Java memiliki fitur Garbage Collection untuk mengelola memori secara otomatis.",
-                "Java adalah bahasa pemrograman berorientasi objek (OOP).",
-                "Java memiliki pustaka standar yang sangat kaya, seperti Java Collections Framework.",
-                "Setiap versi memiliki peningkatan performa dan fitur baru misalnya Java 8 dengan Lambda Expressions.",
-                "Java memiliki framework Spring yang populer untuk pengembangan aplikasi web dan enterprise.",
-                "banyak perusahaan teknologi besar seperti Google, Amazon, dan Facebook menggunakan Java dalam sistem mereka."
+            String[] javaFacts = {
+                "Java was originally called Oak before it was changed to Java.",
+                "Java was first released by Sun Microsystems in 1995.",
+                "Java's slogan is ‘Write Once, Run Anywhere’ (WORA).",
+                "Java is used by more than 3 billion devices worldwide.",
+                "Android uses Java as the main language for development.",
+                "Java is named after Java coffee, not just a random name.",
+                "Java has a mascot called ‘Duke’.",
+                "Oracle Corpuration currently manages Java development after acquiring Sun Microsystems.",
+                "Java does not have explicit pointers like C++ to improve security.",
+                "The Java Virtual Machine (JVM) allows java to run on various platforms without the need to recompile.",
+                "Java is one of the most popular programming languages in the world.",
+                "Almost all large companies use java in their backend systems.",
+                "Java is widely used in the development of banking applications due to its high security.",
+                "Minecraft, one of the most popular games in the world, is made with Java.",
+                "Java has a Garbage Collection feature to manage memory automatically.",
+                "Java is an object-oriented programming (OOP) language.",
+                "Java has very rich standard libraries, such as the Java Collections Framework.",
+                "Each version has performance improvements and new features such as Java 8 with Lambda Expressions.",
+                "Java has a popular Spring framework for web and enterprise application development.",
+                "Many big tech companies such as Google, Amazon, and Facebook use Java in their systems."
             };
 
             // Memilih kata pengantar dan fakta secara acak
-            String introFakta = kataPengantar[random.nextInt(kataPengantar.length)];
-            String faktaTerpilih = faktaJava[random.nextInt(faktaJava.length)];
+            String introFact = intros[random.nextInt(intros.length)];
+            String selectedFact = javaFacts[random.nextInt(javaFacts.length)];
 
             // Menampilkan fakta dengan efek lebih menarik
-            System.out.println("\n" + randomBg + introFakta + RESET);
-            System.out.println(randomBg + faktaTerpilih + RESET);
+            System.out.println("\n" + randomBg + introFact + RESET);
+            System.out.println(randomBg + selectedFact + RESET);
 
         } else {
             // Jika pengguna tidak ingin melihat fakta, tampilkan pesan menarik lainnya
-            String[] pesanMenarik = {
-                "🎭 Tidak apa-apa, Java tetap keren meskipun tanpa fakta!",
-                "🚀 Baiklah, tapi tetap ingat: Java adalah bahasa yang luar biasa!",
-                "🌟 Mungkin lain kali kita bisa membahas tentang pemrograman lebih dalam",
-                "💻 Oke, tapi jangan lupa untuk terus belajar dan bereksperimen!",
-                "🔥 Tidak masalah, tapi tahukah kamu? Kamu adalah programmer yang hebat!"
+            String[] funMessages = {
+                "🎭 It's okay, Java is cool even without the facts!",
+                "🚀 Okay, but keep in mind: Java is a great language!",
+                "🌟 Maybe next time we can talk about programming in more depth",
+                "💻 Okay, but don't forget to keep learning and experimenting!",
+                "🔥 No problem, but you know what? You're a great programmer!"
             };
 
             // Memilih pesan acak untuk ditampilkan 
-            String pesanTerpilih = pesanMenarik[random.nextInt(pesanMenarik.length)];
-            System.out.println(randomBg + "\n" + pesanTerpilih + RESET);
+            String selecMessange = funMessages[random.nextInt(funMessages.length)];
+            System.out.println(randomBg + "\n" + selecMessange + RESET);
         }
         
         // Menampilkan versi Java dengan latar belakang acak
-        String versiJava = System.getProperty("java.version");
-        System.out.println(randomBg + "⚙️ Anda saat ini menggunakan Java versi: " + versiJava + " ⚙️" + RESET);
+        String javaVersion = System.getProperty("java.version");
+        System.out.println(randomBg + "🤖 You are currently using the Java version: " + javaVersion + " 🤖" + RESET);
 
         // Menutup scanner
         scanner.close();
