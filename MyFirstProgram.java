@@ -11,16 +11,32 @@ public class MyFirstProgram {
     public static final String PURPLE_BG = "\u001B[45m";
     public static final String CYAN_BG = "\u001B[46m";
 
+    // ANSI Escape Codes untuk Warna Teks
+    public static final String RED = "\u001B[31m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String BLUE = "\u001B[34m";
+    public static final String PURPLE = "\u001B[35m";
+    public static final String CYAN = "\u001B[36m";
+
     public static void main(String[] args) {
         // Array warna latar belakang 
         String[] bgColors = {RED_BG, GREEN_BG, YELLOW_BG, BLUE_BG, PURPLE_BG, CYAN_BG};
 
-        // Memilih warna latar belakang secara acak
+        // Array warna teks untuk frame 
+        String[] textColors = {RED, GREEN, YELLOW, BLUE, PURPLE, CYAN};
+
+        // Memilih warna latar belakang dan warna teks secara acak
         Random random = new Random();
         String randomBg = bgColors[random.nextInt(bgColors.length)];
+        String randomTextColor = textColors [random.nextInt(textColors.length)];
+
+        // Menampilkan teks frammed 
+        System.out.println("╔════════════════════════════════╗");
+        System.out.println("║" + randomTextColor + "🔥 WELLCOME TO FUNFACTS JAVA! 🔥" + RESET + "║" );
+        System.out.println("╚════════════════════════════════╝");
 
         // Menampilkan teks dengan latar belakang acak
-        System.out.println(randomBg + "🔥 Welcome to the world of Java 🔥" + RESET);
         System.out.println(randomBg + "💻 Get ready for an exciting journey with Java! 💻" + RESET);
 
         // Meminta nama pengguna
@@ -87,7 +103,7 @@ public class MyFirstProgram {
 
             // Memilih pesan acak untuk ditampilkan 
             String selecMessange = funMessages[random.nextInt(funMessages.length)];
-            System.out.println(randomBg + "\n" + selecMessange + RESET);
+            System.out.println(randomBg + selecMessange + RESET);
         }
         
         // Menampilkan versi Java dengan latar belakang acak
